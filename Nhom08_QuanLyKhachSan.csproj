@@ -46,14 +46,98 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="GUI\BC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\BC.Designer.cs">
+      <DependentUpon>BC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="GUI\DP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DP.Designer.cs">
+      <DependentUpon>DP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LB_DMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LB_DMP.Designer.cs">
+      <DependentUpon>LB_DMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LB_HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LB_HD.Designer.cs">
+      <DependentUpon>LB_HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LB_PTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LB_PTP.Designer.cs">
+      <DependentUpon>LB_PTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_KH.Designer.cs">
+      <DependentUpon>QL_KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_NV.Designer.cs">
+      <DependentUpon>QL_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QL_PH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QL_PH.Designer.cs">
+      <DependentUpon>QL_PH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TC.Designer.cs">
+      <DependentUpon>TC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\BC.resx">
+      <DependentUpon>BC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DP.resx">
+      <DependentUpon>DP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LB_DMP.resx">
+      <DependentUpon>LB_DMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LB_HD.resx">
+      <DependentUpon>LB_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LB_PTP.resx">
+      <DependentUpon>LB_PTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_KH.resx">
+      <DependentUpon>QL_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_NV.resx">
+      <DependentUpon>QL_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QL_PH.resx">
+      <DependentUpon>QL_PH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TC.resx">
+      <DependentUpon>TC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,9 +156,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SQL\QLKS.bak" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS\" />
+    <Folder Include="DAO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

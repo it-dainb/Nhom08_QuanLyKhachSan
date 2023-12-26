@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Nhom08_QuanLyKhachSan
+namespace Nhom08_QuanLyKhachSan.GUI
 {
-    public partial class Form1 : Form
+    public partial class TC : Form
     {
-        public Form1()
+        public TC()
         {
             InitializeComponent();
         }

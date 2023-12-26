@@ -1,6 +1,6 @@
-﻿namespace Nhom08_QuanLyKhachSan
+﻿namespace Nhom08_QuanLyKhachSan.GUI
 {
-    partial class Form1
+    partial class QL_KH
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // QL_KH
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1036, 774);
+            this.Name = "QL_KH";
+            this.Text = "QL_KH";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
