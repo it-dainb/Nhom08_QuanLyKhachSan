@@ -668,11 +668,11 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(66, 126);
+            this.label11.Location = new System.Drawing.Point(62, 111);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(261, 25);
+            this.label11.Size = new System.Drawing.Size(261, 50);
             this.label11.TabIndex = 22;
-            this.label11.Text = "Không tồn tại phòng trống";
+            this.label11.Text = "Không tồn tại phòng trống\r\nHãy chọn loại phòng khác";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DP
@@ -689,8 +689,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelDMP);
             this.Controls.Add(this.dtvKH);
-            this.Controls.Add(this.dtvRoom);
             this.Controls.Add(this.panelNoneKH);
+            this.Controls.Add(this.dtvRoom);
             this.Controls.Add(this.panelNonePH);
             this.Name = "DP";
             this.Text = "Form1";

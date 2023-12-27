@@ -96,6 +96,13 @@ namespace Nhom08_QuanLyKhachSan.GUI
                 rowFilter += "AND [Tình Trạng] LIKE '%" + comboTtr.SelectedItem.ToString() + "%'";
 
             dtRoom.DefaultView.RowFilter = rowFilter;
+
+            dtvRoom.Visible = true;
+            if (dtvRoom.Rows.Count == 0)
+            {
+                panelNonePH.Visible = true;
+                dtvRoom.Visible = false;
+            }
         }
 
         private void loadData()
@@ -130,11 +137,6 @@ namespace Nhom08_QuanLyKhachSan.GUI
                 dtvKH.Visible = false;
             }
 
-            if (dtRoom.Rows.Count == 0)
-            {
-                panelNonePH.Visible = true;
-                dtvRoom.Visible = false;
-            }
 
             dtvDK_PT.DataSource = dtDK_PT;
             DataGridViewCheckBoxColumn colBoxPT = new DataGridViewCheckBoxColumn();
