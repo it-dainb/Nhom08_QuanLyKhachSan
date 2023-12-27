@@ -51,7 +51,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(567, 116);
+            this.dataGridView1.Location = new System.Drawing.Point(70, 133);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(408, 602);
             this.dataGridView1.TabIndex = 2;
@@ -63,7 +63,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(561, 62);
+            this.label2.Location = new System.Drawing.Point(64, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(320, 31);
             this.label2.TabIndex = 3;
@@ -71,7 +71,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(305, 674);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(770, 691);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 44);
             this.button1.TabIndex = 4;
@@ -80,7 +81,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(61, 674);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(542, 691);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(202, 44);
             this.button2.TabIndex = 5;
