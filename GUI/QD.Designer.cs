@@ -1,6 +1,6 @@
 ﻿namespace Nhom08_QuanLyKhachSan.GUI
 {
-    partial class TC
+    partial class QD
     {
         /// <summary>
         /// Required designer variable.
@@ -38,19 +38,19 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 31);
+            this.label1.Size = new System.Drawing.Size(130, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tra cứu";
+            this.label1.Text = "Quy định";
             // 
-            // TC
+            // QD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1036, 774);
             this.Controls.Add(this.label1);
-            this.Name = "TC";
-            this.Text = "TC";
+            this.Name = "QD";
+            this.Text = "QD";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -2,12 +2,14 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Nhom08_QuanLyKhachSan.GUI
 {
     public partial class Main : Form
     {
+
+        private Button currentBtn = null;
+
         public Main()
         {
             InitializeComponent();
@@ -39,50 +41,47 @@ namespace Nhom08_QuanLyKhachSan.GUI
                 }
             }
             else
+            {
+                resetTextAlign();
                 subMenu.Visible = false;
-        }
-
-        private void resetBtnColor()
-        {
-            foreach (System.Windows.Forms.Button c in panelSideMenu.Controls.OfType<System.Windows.Forms.Button>())
-            {
-                c.BackColor = Color.FromArgb(11, 7, 17);
-                c.ForeColor = Color.Gainsboro;
-
-                if (c.Text == "Thoát")
-                {
-                    continue;
-                }
-
-                c.TextAlign = ContentAlignment.MiddleLeft;
-            }
-
-            foreach (System.Windows.Forms.Button c in panelSubLB.Controls.OfType<System.Windows.Forms.Button>())
-            {
-                c.BackColor = Color.FromArgb(35, 32, 39);
-                c.ForeColor = Color.Gainsboro;
-                c.TextAlign = ContentAlignment.MiddleLeft;
-            }
-
-            foreach (System.Windows.Forms.Button c in panelSubQL.Controls.OfType<System.Windows.Forms.Button>())
-            {
-                c.BackColor = Color.FromArgb(35, 32, 39);
-                c.ForeColor = Color.Gainsboro;
-                c.TextAlign = ContentAlignment.MiddleLeft;
             }
         }
 
-        private void hightLightBtn(object sender, bool right = true)
+        private void resetTextAlign()
         {
-            resetBtnColor();
+            currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+        }
 
-            System.Windows.Forms.Button btn = (System.Windows.Forms.Button)sender;
+        private void resetColor()
+        {
+            currentBtn.BackColor = Color.FromArgb(11, 7, 17);
 
-            btn.BackColor = Color.White;
+            if (currentBtn.Name.Contains("_"))
+            {
+                currentBtn.BackColor = Color.FromArgb(35, 32, 39);
+            }
+
+            currentBtn.ForeColor = Color.White;
+            currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+        }
+
+        private void hightLightBtn(object sender)
+        {
+
+            Button btn = (Button)sender;
+
+            btn.BackColor = Color.White; 
             btn.ForeColor = Color.Black;
-            
-            if (right)
-                btn.TextAlign = ContentAlignment.MiddleRight;
+            btn.TextAlign = ContentAlignment.MiddleRight;
+
+            if (currentBtn != null && currentBtn != btn)
+            {
+
+                resetColor();
+                resetTextAlign();
+            }
+
+            currentBtn = btn;
         }
 
         private Form activateForm = null;
@@ -112,7 +111,6 @@ namespace Nhom08_QuanLyKhachSan.GUI
         private void btnLB_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSubLB);
-
         }
 
         private void btnDP_Click(object sender, EventArgs e)
@@ -156,6 +154,8 @@ namespace Nhom08_QuanLyKhachSan.GUI
         private void btnPH_QL_Click(object sender, EventArgs e)
         {
             hightLightBtn(sender);
+
+            openChildForm(new GUI.QL_PH());
         }
 
         private void btnDM_LB_Click(object sender, EventArgs e)
@@ -181,7 +181,14 @@ namespace Nhom08_QuanLyKhachSan.GUI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();   
+        }
+
+        private void btnQD_Click(object sender, EventArgs e)
+        {
+            hightLightBtn(sender);
+
+            openChildForm(new GUI.QD());
         }
     }
 }
