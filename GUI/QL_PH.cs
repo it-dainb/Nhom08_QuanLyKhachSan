@@ -136,6 +136,9 @@ namespace Nhom08_QuanLyKhachSan.GUI
             dtvLP_MODE.ClearSelection();
 
             btnEditMode.PerformClick();
+            
+            btnSearchMode.Enabled = false;
+            btnSearchMode.Visible = false;
         }
 
         private void btnDK_Click(object sender, EventArgs e)
@@ -165,6 +168,9 @@ namespace Nhom08_QuanLyKhachSan.GUI
             dtvDK_MODE.ClearSelection();
 
             btnEditMode.PerformClick();
+
+            btnSearchMode.Enabled = false;
+            btnSearchMode.Visible = false;
         }
 
         private void btnPH_Click(object sender = null, EventArgs e = null)
@@ -196,6 +202,9 @@ namespace Nhom08_QuanLyKhachSan.GUI
             dtvLP.ClearSelection();
 
             btnEditMode.PerformClick();
+
+            btnSearchMode.Enabled = true;
+            btnSearchMode.Visible = true;
         }
 
         private void btnEditMode_Click(object sender, EventArgs e)
@@ -509,6 +518,13 @@ namespace Nhom08_QuanLyKhachSan.GUI
         {
             if (currentOption == btnPH)
             {
+                
+                if (currentRowPH.Cells["Tình Trạng"].Value.ToString().Contains("Đ"))
+                {
+                    MessageBox.Show("Phòng đang sử dụng không được xoá!");
+                    return;
+                }
+
                 qlBUS.deletePH(currentRowPH);
                 dtPH = qlBUS.getDSPhong();
                 dtvPH.DataSource = dtPH;

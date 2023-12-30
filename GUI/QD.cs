@@ -28,6 +28,9 @@ namespace Nhom08_QuanLyKhachSan.GUI
             boxDK.Text = string.Empty;
             boxHS.Text = string.Empty;
             boxPT.Text = string.Empty;
+
+            btnSearchMode.Enabled = false;
+            btnSearchMode.Visible = false;
         }
 
         private void loadData()

@@ -679,11 +679,11 @@
             // btnClean
             // 
             this.btnClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClean.Location = new System.Drawing.Point(880, 328);
+            this.btnClean.Location = new System.Drawing.Point(845, 328);
             this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(89, 31);
+            this.btnClean.Size = new System.Drawing.Size(124, 31);
             this.btnClean.TabIndex = 26;
-            this.btnClean.Text = "Xoá";
+            this.btnClean.Text = "Bỏ chọn";
             this.btnClean.UseVisualStyleBackColor = true;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 

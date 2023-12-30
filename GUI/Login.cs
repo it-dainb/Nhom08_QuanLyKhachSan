@@ -41,8 +41,8 @@ namespace Nhom08_QuanLyKhachSan.GUI
             DataTable dtUser = loginBUS.getUser(username, user_password);
 
             if(dtUser.Rows.Count > 0) 
-            { 
-                Main form2 = new Main();
+            {
+                Main form2 = new Main(dtUser.Rows[0]["QUYEN"].ToString().Trim());
                 form2.Show();
                 this.Hide();
             }

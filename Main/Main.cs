@@ -9,12 +9,42 @@ namespace Nhom08_QuanLyKhachSan.GUI
     {
 
         private Button currentBtn = null;
+        private string PhanQuyen = "NV";
+        private BUS.Login loginBUS;
 
-        public Main()
+        public Main(string PhanQuyen)
         {
+            this.PhanQuyen = PhanQuyen;
             InitializeComponent();
             customizeDesing();
+
+            loginBUS = new BUS.Login();
+
+            btnDP.Enabled = false;
+            btnTC.Enabled = false;
+            btnQD.Enabled = false;
+            btnBC.Enabled = false;
+            btnQL.Enabled = false;
+            btnLB.Enabled = false;
+
+            setQuyen();
         }
+
+        private void setQuyen()
+        {
+            btnDP.Enabled = true;
+            btnTC.Enabled = true;
+
+            if (PhanQuyen == "QL")
+            {
+                btnQD.Enabled = true;
+                btnBC.Enabled = true;
+                btnQL.Enabled = true;
+            }
+
+            btnLB.Enabled = false;
+        }
+
         public void customizeDesing()
         {
             panelSubQL.Visible = false;
