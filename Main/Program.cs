@@ -17,7 +17,7 @@ namespace Nhom08_QuanLyKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.Main());
+            Application.Run(new GUI.Login());
         }
     }
 }

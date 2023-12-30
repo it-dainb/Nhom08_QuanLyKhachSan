@@ -454,6 +454,8 @@
             this.MinimumSize = new System.Drawing.Size(1366, 813);
             this.Name = "Main";
             this.Text = "Quản lý khách sạn";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelSubLB.ResumeLayout(false);
             this.panelSubQL.ResumeLayout(false);

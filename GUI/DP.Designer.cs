@@ -46,6 +46,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbPT = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboTtr = new System.Windows.Forms.ComboBox();
             this.comboLP = new System.Windows.Forms.ComboBox();
@@ -64,13 +67,11 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtvDK_PT = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.lbPT = new System.Windows.Forms.Label();
             this.panelNoneKH = new System.Windows.Forms.Panel();
             this.lbNone = new System.Windows.Forms.Label();
             this.panelNonePH = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnClean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvKH)).BeginInit();
             this.panel1.SuspendLayout();
@@ -344,6 +345,45 @@
             this.panel1.Size = new System.Drawing.Size(385, 341);
             this.panel1.TabIndex = 19;
             // 
+            // lbPT
+            // 
+            this.lbPT.AutoSize = true;
+            this.lbPT.BackColor = System.Drawing.Color.DimGray;
+            this.lbPT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbPT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPT.ForeColor = System.Drawing.Color.White;
+            this.lbPT.Location = new System.Drawing.Point(228, 178);
+            this.lbPT.Name = "lbPT";
+            this.lbPT.Size = new System.Drawing.Size(24, 25);
+            this.lbPT.TabIndex = 21;
+            this.lbPT.Text = "0";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.DimGray;
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(181, 178);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(19, 25);
+            this.label20.TabIndex = 20;
+            this.label20.Text = ":";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.DimGray;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(52, 178);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 25);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Phụ thu";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
@@ -589,45 +629,6 @@
             this.dtvDK_PT.TabIndex = 23;
             this.dtvDK_PT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvDK_PT_CellClick);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.DimGray;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(52, 178);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 25);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Phụ thu";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.DimGray;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(181, 178);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(19, 25);
-            this.label20.TabIndex = 20;
-            this.label20.Text = ":";
-            // 
-            // lbPT
-            // 
-            this.lbPT.AutoSize = true;
-            this.lbPT.BackColor = System.Drawing.Color.DimGray;
-            this.lbPT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbPT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPT.ForeColor = System.Drawing.Color.White;
-            this.lbPT.Location = new System.Drawing.Point(228, 178);
-            this.lbPT.Name = "lbPT";
-            this.lbPT.Size = new System.Drawing.Size(24, 25);
-            this.lbPT.TabIndex = 21;
-            this.lbPT.Text = "0";
-            // 
             // panelNoneKH
             // 
             this.panelNoneKH.BackColor = System.Drawing.Color.LightCoral;
@@ -644,11 +645,11 @@
             this.lbNone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbNone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNone.ForeColor = System.Drawing.Color.White;
-            this.lbNone.Location = new System.Drawing.Point(34, 56);
+            this.lbNone.Location = new System.Drawing.Point(22, 53);
             this.lbNone.Name = "lbNone";
-            this.lbNone.Size = new System.Drawing.Size(388, 50);
+            this.lbNone.Size = new System.Drawing.Size(413, 50);
             this.lbNone.TabIndex = 22;
-            this.lbNone.Text = "Không tồn tại khách hàng chưa đặt chỗ\r\nHãy thêm khách hàng";
+            this.lbNone.Text = "Không tồn tại khách hàng chưa đặt phòng\r\nHãy thêm khách hàng";
             this.lbNone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbNone.Click += new System.EventHandler(this.lbNone_Click);
             // 
@@ -675,12 +676,24 @@
             this.label11.Text = "Không tồn tại phòng trống\r\nHãy chọn loại phòng khác";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnClean
+            // 
+            this.btnClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClean.Location = new System.Drawing.Point(880, 328);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(89, 31);
+            this.btnClean.TabIndex = 26;
+            this.btnClean.Text = "Xoá";
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
+            // 
             // DP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1036, 774);
+            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.dtvDK_PT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label17);
@@ -688,10 +701,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelDMP);
-            this.Controls.Add(this.dtvKH);
-            this.Controls.Add(this.panelNoneKH);
             this.Controls.Add(this.dtvRoom);
             this.Controls.Add(this.panelNonePH);
+            this.Controls.Add(this.dtvKH);
+            this.Controls.Add(this.panelNoneKH);
             this.Name = "DP";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dtvRoom)).EndInit();
@@ -754,5 +767,6 @@
         private System.Windows.Forms.Label lbNone;
         private System.Windows.Forms.Panel panelNonePH;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnClean;
     }
 }

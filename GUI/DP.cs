@@ -121,6 +121,9 @@ namespace Nhom08_QuanLyKhachSan.GUI
             dtvRoom.Columns["Đơn Giá"].DefaultCellStyle.Format = "##,#";
             
             dtvRoom.Columns["MADK"].Visible = false;
+            dtvRoom.Columns["MALOAI"].Visible = false;
+            dtvRoom.Columns["MALOAI1"].Visible = false;
+            dtvRoom.Columns["GHICHU"].Visible = false;
 
 
             dtvKH.DataSource = dtKH;
@@ -223,8 +226,6 @@ namespace Nhom08_QuanLyKhachSan.GUI
 
             currentRowKH.Cells[e.ColumnIndex].Value = true;
 
-            Console.WriteLine(currentRowKH.Cells["LOAIKH"].Value.ToString());
-
             dictKH.Add(maKH, currentRowKH);
             lbSN.Text = dictKH.Count.ToString() + " Người";
 
@@ -271,6 +272,16 @@ namespace Nhom08_QuanLyKhachSan.GUI
         private void lbNone_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            foreach (KeyValuePair<string, DataGridViewRow> item in dictKH)
+            {
+                item.Value.Cells["Chọn"].Value = false;
+            }
+
+            dictKH.Clear();
         }
     }
 }

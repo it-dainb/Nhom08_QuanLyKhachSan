@@ -181,9 +181,17 @@
   <ItemGroup>
     <Compile Include="BUS\BC.cs" />
     <Compile Include="BUS\DP.cs" />
+    <Compile Include="BUS\Login.cs" />
+    <Compile Include="BUS\QD.cs" />
+    <Compile Include="BUS\QL.cs" />
+    <Compile Include="BUS\TC.cs" />
     <Compile Include="Class\MonthPicker.cs" />
     <Compile Include="DAO\BC.cs" />
     <Compile Include="DAO\DP.cs" />
+    <Compile Include="DAO\Login.cs" />
+    <Compile Include="DAO\QD.cs" />
+    <Compile Include="DAO\QL.cs" />
+    <Compile Include="DAO\TC.cs" />
     <Compile Include="GUI\BC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +221,12 @@
     </Compile>
     <Compile Include="GUI\LB_PTP.Designer.cs">
       <DependentUpon>LB_PTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QD.cs">
       <SubType>Form</SubType>
@@ -269,6 +283,9 @@
     <EmbeddedResource Include="GUI\LB_PTP.resx">
       <DependentUpon>LB_PTP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QD.resx">
       <DependentUpon>QD.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,7 +328,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SQL\QLKS.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

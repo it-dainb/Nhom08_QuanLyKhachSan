@@ -106,11 +106,14 @@ namespace Nhom08_QuanLyKhachSan.GUI
         {
             showSubMenu(panelSubQL);
 
+            btnKH_QL.PerformClick();
         }
 
         private void btnLB_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSubLB);
+
+            btnDM_LB.PerformClick();
         }
 
         private void btnDP_Click(object sender, EventArgs e)
@@ -189,6 +192,20 @@ namespace Nhom08_QuanLyKhachSan.GUI
             hightLightBtn(sender);
 
             openChildForm(new GUI.QD());
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Login loginForm = new GUI.Login();
+                loginForm.Show();
+            }
         }
     }
 }

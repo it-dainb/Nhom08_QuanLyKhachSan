@@ -30,7 +30,7 @@ namespace Nhom08_QuanLyKhachSan.DAO
         public DataTable getDSPhong()
         {
             string sql =
-                "SELECT MAPHONG, TENLOAI, DONGIA, TINHTRANG, MADK " +
+                "SELECT * " +
                 "FROM PHONG " +
                 "JOIN LOAIPHONG " +
                 "ON PHONG.MALOAI = LOAIPHONG.MALOAI";
@@ -71,33 +71,6 @@ namespace Nhom08_QuanLyKhachSan.DAO
                 "ORDER BY " + col + " DESC";
 
             return conn.excuteScalar(sql);
-        }
-
-        public void setKH(string MAKH, string TENKH, string CMND, string DIACHI, string LOAIKH)
-        {
-            string sql =
-                "INSERT INTO KHACHHANG " +
-                    "(MAKH, TENKH, CMND, DIACHI, LOAIKH, MANHOM) " +
-                "VALUES " +
-                    "(@MAKH, @TENKH, @CMND, @DIACHI, @LOAIKH, @MANHOM);";
-
-            SqlParameter[] sqlParameters = new SqlParameter[6];
-
-            sqlParameters[0] = new SqlParameter("@MAKH", SqlDbType.NChar, 10);
-            sqlParameters[1] = new SqlParameter("@TENKH", SqlDbType.NText);
-            sqlParameters[2] = new SqlParameter("@CMND", SqlDbType.NText);
-            sqlParameters[3] = new SqlParameter("@DIACHI", SqlDbType.NText);
-            sqlParameters[4] = new SqlParameter("@LOAIKH", SqlDbType.NChar, 10);
-            sqlParameters[5] = new SqlParameter("@MANHOM", SqlDbType.NChar, 10);
-
-            sqlParameters[0].Value = MAKH;
-            sqlParameters[1].Value = TENKH;
-            sqlParameters[2].Value = CMND;
-            sqlParameters[3].Value = DIACHI;
-            sqlParameters[4].Value = LOAIKH;
-            sqlParameters[5].Value = "NH00";
-
-            conn.excuteNonQuery(sql, sqlParameters);
         }
 
         public void setNhom(string maNhom, int SL, int SLQT, int SLND) 

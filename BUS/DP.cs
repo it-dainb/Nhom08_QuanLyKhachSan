@@ -13,10 +13,12 @@ namespace Nhom08_QuanLyKhachSan.BUS
     internal class DP
     {
         private DAO.DP dpDAO;
+        private DAO.QL qlDAO;
 
         public DP()
         {
             dpDAO = new DAO.DP();
+            qlDAO = new DAO.QL();
         }
 
         public DataTable getDSPhong() 
@@ -216,16 +218,22 @@ namespace Nhom08_QuanLyKhachSan.BUS
             }
 
             string MAPT = getMA("MAPT", "PHIEUTHUEPHONG", prefix: "PT");
+            string MAPHONG = rowPH.Cells["Phòng"].Value.ToString().Trim();
+            string MADK = rowDK_PT.Cells["Mã Điều Kiện"].Value.ToString().Trim();
 
             float TYLE = getTyLe(dictKH, rowPH, rowDK_PT);
             dpDAO.setPhieuThuePhong(
                 MAPT, 
                 MANHOM, 
-                rowPH.Cells["Phòng"].Value.ToString(), 
+                MAPHONG,
                 DateTime.Now, 
-                rowDK_PT.Cells["Mã Điều Kiện"].Value.ToString(), 
+                MADK,
                 TYLE
             );
+
+            string MALOAI = rowPH.Cells["MALOAI"].Value.ToString().Trim();
+
+            qlDAO.updatePH(MAPHONG, MALOAI, MADK, "Đã Đặt", "");
 
             return error;
         }
